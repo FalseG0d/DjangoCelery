@@ -1,1 +1,1 @@
-# DjangoImageCrop
+# DjangoCelery
