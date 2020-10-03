@@ -25,22 +25,23 @@
                         Send new Email
                     </header>
 
-                    <form id="send-mail" action="mail" class="col s10 offset-s1">
+                    <form id="send-mail" action="mail" method="POST" class="col s10 offset-s1">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="input-field col s12">
                                 <label for="email">For:</label>
-                                <input id="email" type="email">
+                                <input name="to" id="email" type="email">
                             </div>
                             <div class="input-field col s12">
                                 <label for="subject">Subject:</label>
-                                <input id="subject" type="text">
+                                <input name="subject" id="subject" type="text">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="input-field col s12">
                                 <label for="message">Message: </label>
-                                <textarea id="message" class="materialize-textarea"></textarea>
+                                <textarea name="message" id="message" class="materialize-textarea"></textarea>
                             </div>
                         </div>
 
